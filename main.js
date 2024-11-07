@@ -37,7 +37,7 @@ import exams from './exams.json' with { type: 'json' };
     if (result.length > 0 ) {
       document.querySelector('#answer').textContent = result[0].item.answer
     } else {
-      document.querySelector('#answer').textContent += '0'
+      document.querySelector('#answer').textContent = '読み取り失敗'
     }
     document.querySelector('body').appendChild(log)
   })
