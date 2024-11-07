@@ -26,7 +26,7 @@ import exams from './exams.json' with { type: 'json' };
 
   updateCanvas()
 
-  document.querySelector('body').addEventListener('click', async () => {
+  document.querySelector('#app').addEventListener('click', async () => {
     const image = canvas2.toDataURL()
     const {
       data: { text },
@@ -39,6 +39,5 @@ import exams from './exams.json' with { type: 'json' };
     } else {
       document.querySelector('#answer').textContent = '読み取り失敗'
     }
-    document.querySelector('body').appendChild(log)
   })
 })()
